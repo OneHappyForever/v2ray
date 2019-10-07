@@ -16,7 +16,7 @@ _download_caddy_file() {
 	# tar zxf $caddy_tmp_file -C $caddy_tmp
 	# cp -f ${caddy_tmp}caddy /usr/local/bin/
 
-	wget -qO- https://getcaddy.com | bash -s personal
+	wget -qO- https://getcaddy.com | bash -s personal tls.dns.cloudflare
 
 	if [[ ! -f /usr/local/bin/caddy ]]; then
 		echo -e "$red 安装 Caddy 出错！$none" && exit 1
